@@ -16,5 +16,19 @@ namespace BookStore
         {
             InitializeComponent();
         }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            
+            if (Username.Text == "admin" && Password.Text == "123qwe")
+            {
+                LoginSuccess alert = new LoginSuccess();
+                alert.Show();
+                this.Close();
+            }
+
+        }
+
+        
     }
 }
