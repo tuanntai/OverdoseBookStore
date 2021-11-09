@@ -22,5 +22,20 @@ namespace BookStore
             Login login = new Login();
             login.Show();
         }
+
+        private void HomeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BookBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
