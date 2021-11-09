@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace BookStore
 {
@@ -17,18 +18,56 @@ namespace BookStore
             InitializeComponent();
         }
 
-        private void loginBtn_Click(object sender, EventArgs e)
+        private void CheckLogin(string Username, string Password)
         {
+            DataTable dt = new DataTable();
+            LoginFail alertFail = new LoginFail();
+            LoginSuccess alertSuccess = new LoginSuccess();
+            SqlConnection ConnectionString = new SqlConnection(@"Data Source=Overdoseee;Initial Catalog=OverdoseBook;Integrated Security=True");
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM UserTable WHERE Username='" + Username + "' AND password='" + Password + "'", ConnectionString);
             
-            if (Username.Text == "admin" && Password.Text == "123qwe")
+            sda.Fill(dt);
+            
+            if (dt.Rows[0][0].ToString() == "1")
             {
-                LoginSuccess alert = new LoginSuccess();
-                alert.Show();
+                alertSuccess.Show();
                 this.Close();
             }
-
+            else
+                alertFail.Show();
         }
 
-        
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+
+            if (Username.Text == "")
+            {
+                MessageBox.Show("Please Enter Your Account !");
+            }
+            else if (Username.Text == "")
+            {
+                MessageBox.Show("Please Enter Your Account !");
+            }
+        }
+
+        private void Password_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && Username.Text == "")
+            {
+                MessageBox.Show("Please Enter Your Account !");
+            }
+            else if (e.KeyCode == Keys.Enter)
+            {
+                CheckLogin(Username.Text, Password.Text);
+            }
+        }
+
+        private void Username_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && Password.Text=="")
+            {
+                Password.Focus();
+            }
+        }
     }
 }

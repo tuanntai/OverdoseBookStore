@@ -71,6 +71,7 @@ namespace BookStore
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(208, 23);
             this.Username.TabIndex = 2;
+            this.Username.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Username_KeyUp);
             // 
             // Password
             // 
@@ -83,6 +84,7 @@ namespace BookStore
             this.Password.Size = new System.Drawing.Size(208, 23);
             this.Password.TabIndex = 3;
             this.Password.UseSystemPasswordChar = true;
+            this.Password.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Password_KeyUp);
             // 
             // label1
             // 
