@@ -69,5 +69,11 @@ namespace BookStore
                 Password.Focus();
             }
         }
+
+        private void SignUpBtn_Click(object sender, EventArgs e)
+        {
+            SignUp signUp = new SignUp();
+            signUp.Show();
+        }
     }
 }
