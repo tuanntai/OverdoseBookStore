@@ -61,6 +61,7 @@ namespace BookStore
             this.SignUpBtn.TabIndex = 1;
             this.SignUpBtn.Text = "Sign Up";
             this.SignUpBtn.UseVisualStyleBackColor = true;
+            this.SignUpBtn.Click += new System.EventHandler(this.SignUpBtn_Click);
             // 
             // Username
             // 
