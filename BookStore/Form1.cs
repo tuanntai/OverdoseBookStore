@@ -21,6 +21,7 @@ namespace BookStore
         {
             Login login = new Login();
             login.Show();
+            login.Focus();
         }
 
         private void HomeBtn_Click(object sender, EventArgs e)
@@ -30,12 +31,20 @@ namespace BookStore
 
         private void UserButton_Click(object sender, EventArgs e)
         {
-
+            UserList userList = new UserList();
+            userList.Show();
         }
 
         private void BookBtn_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }
