@@ -12,6 +12,9 @@ namespace BookStore
         public static SqlConnection
             GetDBConnection(string datasource, string database)
         {
+
+
+
             string connString = @"Data Source=" + datasource + ";Initial Catalog=" + database + ";Integrated Security=True";
             SqlConnection conn = new SqlConnection(connString);
             return conn;
