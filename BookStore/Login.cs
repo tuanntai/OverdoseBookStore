@@ -16,6 +16,7 @@ namespace BookStore
         public Login()
         {
             InitializeComponent();
+            this.ActiveControl = Username;
         }
 
         private void CheckLogin(string Username, string Password)
@@ -75,5 +76,7 @@ namespace BookStore
             SignUp signUp = new SignUp();
             signUp.Show();
         }
+
+       
     }
 }
