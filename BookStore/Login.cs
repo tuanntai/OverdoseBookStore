@@ -40,14 +40,17 @@ namespace BookStore
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-
             if (Username.Text == "")
             {
                 MessageBox.Show("Please Enter Your Account !");
             }
-            else if (Username.Text == "")
+            else if (Password.Text == "")
             {
-                MessageBox.Show("Please Enter Your Account !");
+                MessageBox.Show("Please Enter Your Password !");
+            }
+            else
+            {
+                CheckLogin(Username.Text,Password.Text);
             }
         }
 

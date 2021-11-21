@@ -16,5 +16,13 @@ namespace BookStore
         {
             InitializeComponent();
         }
+
+        private void LoginFail_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }
