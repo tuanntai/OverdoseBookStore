@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace BookStore
 {
@@ -52,8 +53,12 @@ namespace BookStore
         public void Display()
         {
             con = new DBSqlUtils();
-            string query = "select BookID,BookTitle,Author,Publisher,Language,image,Amount from BookTable";
+            string query = "select db.bookid,booktitle,authorname,publisherid,language,image,amount from book db join bookauthor ba on db.bookid=ba.bookid join author a on ba.authorid=a.authorid";
             DataTable TableBook = con.RunQuery(query);
+            TableBook.Columns.Add("Pic", Type.GetType("System.Byte[]"));
+            foreach(DataRow dataRow in TableBook.Rows){
+                dataRow["Pic"] = File.ReadAllBytes(dataRow["image"].ToString());
+            }
             dataGridView1.DataSource = TableBook;
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -19,14 +19,11 @@ namespace BookStore
         public static SqlConnection
             GetDBConnection(string datasource, string database)
         {
-
-
-
             string connString = @"Data Source=" + datasource + ";Initial Catalog=" + database + ";Integrated Security=True";
             SqlConnection conn = new SqlConnection(connString);
             return conn;
         }
-        string conStr = @"Data Source=LAPTOP-751CRMG1;Initial Catalog= OverdoseBook;User ID=QUOCVINH;Password=1";
+        string conStr = @"Data Source=LAPTOP-751CRMG1;Initial Catalog= OverdoseBook;User ID=Vinh;Password=1";
         public bool Open()
         {
             try

@@ -36,19 +36,24 @@ namespace BookStore
             // UserListGridView
             // 
             this.UserListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UserListGridView.Location = new System.Drawing.Point(12, 161);
+            this.UserListGridView.Location = new System.Drawing.Point(16, 198);
+            this.UserListGridView.Margin = new System.Windows.Forms.Padding(4);
             this.UserListGridView.Name = "UserListGridView";
-            this.UserListGridView.Size = new System.Drawing.Size(760, 388);
+            this.UserListGridView.RowHeadersWidth = 51;
+            this.UserListGridView.Size = new System.Drawing.Size(1013, 478);
             this.UserListGridView.TabIndex = 0;
+            this.UserListGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UserListGridView_CellContentClick);
             // 
             // UserList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(1045, 690);
             this.Controls.Add(this.UserListGridView);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserList";
             this.Text = "UserList";
+            this.Load += new System.EventHandler(this.UserList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UserListGridView)).EndInit();
             this.ResumeLayout(false);
 
