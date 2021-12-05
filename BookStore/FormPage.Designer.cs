@@ -57,6 +57,7 @@ namespace BookStore
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.NhanVienbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -94,6 +95,7 @@ namespace BookStore
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.NhanVienbtn);
             this.panel1.Controls.Add(this.Change6);
             this.panel1.Controls.Add(this.Change5);
             this.panel1.Controls.Add(this.Change4);
@@ -440,6 +442,17 @@ namespace BookStore
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // NhanVienbtn
+            // 
+            this.NhanVienbtn.Location = new System.Drawing.Point(615, 24);
+            this.NhanVienbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.NhanVienbtn.Name = "NhanVienbtn";
+            this.NhanVienbtn.Size = new System.Drawing.Size(186, 49);
+            this.NhanVienbtn.TabIndex = 21;
+            this.NhanVienbtn.Text = "More staff";
+            this.NhanVienbtn.UseVisualStyleBackColor = true;
+            this.NhanVienbtn.Click += new System.EventHandler(this.NhanVienbtn_Click);
+            // 
             // FormPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -503,6 +516,7 @@ namespace BookStore
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button NhanVienbtn;
     }
 }
 

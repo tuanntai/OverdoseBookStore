@@ -259,5 +259,10 @@ namespace BookStore
         {
 
         }
+
+        private void NhanVienbtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
