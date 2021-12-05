@@ -28,6 +28,7 @@ namespace BookStore
             DataTable dt = new DataTable();
             LoginFail alertFail = new LoginFail();
             LoginSuccess alertSuccess = new LoginSuccess();
+            FormPage formPage = new FormPage();
             SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-751CRMG1;Initial Catalog= OverdoseBook;User ID=Vinh;Password=1");
             SqlConnection ConnectionString = new SqlConnection(@"Data Source=Overdoseee;Initial Catalog=OverdoseBook;Integrated Security=True");
             SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM usertable WHERE username='" + Username + "' AND password='" + Password + "'", con);
@@ -36,8 +37,8 @@ namespace BookStore
             
             if (dt.Rows[0][0].ToString() == "1")
             {
-                alertSuccess.Show();
-                this.Close();
+                this.Hide();
+                formPage.Show();
             }
             else
                 alertFail.Show();
@@ -79,11 +80,6 @@ namespace BookStore
             }
         }
 
-        private void SignUpBtn_Click(object sender, EventArgs e)
-        {
-            SignUp signUp = new SignUp();
-            signUp.Show();
-        }
 
        
     }

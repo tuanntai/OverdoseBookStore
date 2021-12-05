@@ -45,7 +45,7 @@ namespace BookStore
         public void DisplayBook()
         {
             con = new DBSqlUtils();
-            string query = "select db.bookid,booktitle,authorname,g.name,p.name,language,image,amount from book db join bookauthor ba on db.bookid = ba.bookid join author a on ba.authorid = a.authorid join publisher p on p.publisherid = db.publisherid join genrebook bg on bg.bookid = db.bookid join genre g on g.genreid = bg.genreid";
+            string query = "select db.bookid,booktitle,authorname,g.genrename,p.publishername,language,image,amount from book db join bookauthor ba on db.bookid = ba.bookid join author a on ba.authorid = a.authorid join publisher p on p.publisherid = db.publisherid join genrebook bg on bg.bookid = db.bookid join genre g on g.genreid = bg.genreid";
             DataTable TableBook = con.RunQuery(query);
             dataGridView1.DataSource = TableBook;
         }
@@ -73,14 +73,14 @@ namespace BookStore
         public void DisplayBookPublisher()
         {
             con = new DBSqlUtils();
-            string query = "select publisherid,name from publisher";
+            string query = "select * from publisher";
             DataTable TableBook = con.RunQuery(query);
             dataGridView5.DataSource = TableBook;
         }
         public void DisplayBookGenre()
         {
             con = new DBSqlUtils();
-            string query = "select genreid,name from genre";
+            string query = "select * from genre";
             DataTable TableBook = con.RunQuery(query);
             dataGridView6.DataSource = TableBook;
         }
