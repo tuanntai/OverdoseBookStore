@@ -111,6 +111,8 @@ namespace BookStore
             Change4.Hide();
             Change5.Hide();
             Change6.Hide();
+            addBtn.Hide();
+            addAuthor.Hide();
         }
         private void girdviewHide()
         {
@@ -176,6 +178,7 @@ namespace BookStore
             pictureBox2.Hide();
             hidebutton();
             Change4.Show();
+            addAuthor.Show();
             girdviewHide();
             dataGridView4.Show();
             DisplayBookAuthor();
@@ -183,12 +186,13 @@ namespace BookStore
 
         private void PublisherBtn_Click(object sender, EventArgs e)
         {
-
+            
             pictureBox2.Hide();
             hidebutton();
             Change5.Show();
             girdviewHide();
             dataGridView5.Show();
+            addBtn.Show();
             DisplayBookPublisher();
         }
 
@@ -263,6 +267,18 @@ namespace BookStore
         private void NhanVienbtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            AddEditPublisher addEditPublisher = new AddEditPublisher();
+            addEditPublisher.Show();
+        }
+
+        private void addAuthor_Click(object sender, EventArgs e)
+        {
+            AddEditAuthor addEditAuthor = new AddEditAuthor();
+            addEditAuthor.Show();
         }
     }
 }
