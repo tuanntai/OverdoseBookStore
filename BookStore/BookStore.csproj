@@ -49,13 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBSqlUtils.cs" />
-    <Compile Include="DBUtils.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Book.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Book.Designer.cs">
+      <DependentUpon>Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBSqlUtils.cs" />
+    <Compile Include="DBUtils.cs" />
+    <Compile Include="FormPage.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="FormPage.Designer.cs">
+      <DependentUpon>FormPage.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -94,8 +102,9 @@
     <Compile Include="UserList.Designer.cs">
       <DependentUpon>UserList.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormPage.resx">
+      <DependentUpon>FormPage.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -155,6 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LogoBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\thuvien.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

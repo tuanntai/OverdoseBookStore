@@ -13,6 +13,10 @@ namespace BookStore
 {
     public partial class Login : Form
     {
+        DBSqlUtils con;
+        private static SqlConnection sqlConnections;
+        private SqlDataAdapter dataAdapter;
+        private SqlCommand sqlCommand;
         public Login()
         {
             InitializeComponent();
@@ -25,7 +29,7 @@ namespace BookStore
             LoginFail alertFail = new LoginFail();
             LoginSuccess alertSuccess = new LoginSuccess();
             SqlConnection ConnectionString = new SqlConnection(@"Data Source=Overdoseee;Initial Catalog=OverdoseBook;Integrated Security=True");
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM UserTable WHERE Username='" + Username + "' AND password='" + Password + "'", ConnectionString);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM usertable WHERE username='" + Username + "' AND password='" + Password + "'", ConnectionString);
             
             sda.Fill(dt);
             
