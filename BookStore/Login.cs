@@ -28,8 +28,9 @@ namespace BookStore
             DataTable dt = new DataTable();
             LoginFail alertFail = new LoginFail();
             LoginSuccess alertSuccess = new LoginSuccess();
+            SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-751CRMG1;Initial Catalog= OverdoseBook;User ID=Vinh;Password=1");
             SqlConnection ConnectionString = new SqlConnection(@"Data Source=Overdoseee;Initial Catalog=OverdoseBook;Integrated Security=True");
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM usertable WHERE username='" + Username + "' AND password='" + Password + "'", ConnectionString);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM usertable WHERE username='" + Username + "' AND password='" + Password + "'", con);
             
             sda.Fill(dt);
             
