@@ -280,5 +280,11 @@ namespace BookStore
             AddEditAuthor addEditAuthor = new AddEditAuthor();
             addEditAuthor.Show();
         }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            SeachForm searchForm = new SeachForm();
+            searchForm.Show();
+        }
     }
 }

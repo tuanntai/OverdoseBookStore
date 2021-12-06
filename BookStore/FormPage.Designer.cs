@@ -31,6 +31,8 @@ namespace BookStore
         {
             this.LoginBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.addAuthor = new System.Windows.Forms.Button();
+            this.addBtn = new System.Windows.Forms.Button();
             this.NhanVienbtn = new System.Windows.Forms.Button();
             this.Change6 = new System.Windows.Forms.Button();
             this.Change5 = new System.Windows.Forms.Button();
@@ -41,6 +43,7 @@ namespace BookStore
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.SearchBtn = new System.Windows.Forms.Button();
             this.HomeBtn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.GenreBtn = new System.Windows.Forms.Button();
@@ -58,8 +61,6 @@ namespace BookStore
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.addBtn = new System.Windows.Forms.Button();
-            this.addAuthor = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -115,6 +116,28 @@ namespace BookStore
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1693, 98);
             this.panel1.TabIndex = 2;
+            // 
+            // addAuthor
+            // 
+            this.addAuthor.Location = new System.Drawing.Point(840, 24);
+            this.addAuthor.Margin = new System.Windows.Forms.Padding(4);
+            this.addAuthor.Name = "addAuthor";
+            this.addAuthor.Size = new System.Drawing.Size(186, 49);
+            this.addAuthor.TabIndex = 23;
+            this.addAuthor.Text = "Add Author";
+            this.addAuthor.UseVisualStyleBackColor = true;
+            this.addAuthor.Click += new System.EventHandler(this.addAuthor_Click);
+            // 
+            // addBtn
+            // 
+            this.addBtn.Location = new System.Drawing.Point(840, 24);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(186, 49);
+            this.addBtn.TabIndex = 22;
+            this.addBtn.Text = "Add Publisher";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // NhanVienbtn
             // 
@@ -220,6 +243,7 @@ namespace BookStore
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.SearchBtn);
             this.panel3.Controls.Add(this.HomeBtn);
             this.panel3.Controls.Add(this.ExitBtn);
             this.panel3.Controls.Add(this.GenreBtn);
@@ -236,6 +260,18 @@ namespace BookStore
             this.panel3.Size = new System.Drawing.Size(373, 840);
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.SearchBtn.Location = new System.Drawing.Point(3, 395);
+            this.SearchBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(365, 49);
+            this.SearchBtn.TabIndex = 16;
+            this.SearchBtn.Text = "Search";
+            this.SearchBtn.UseVisualStyleBackColor = false;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // HomeBtn
             // 
@@ -457,28 +493,6 @@ namespace BookStore
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // addBtn
-            // 
-            this.addBtn.Location = new System.Drawing.Point(840, 24);
-            this.addBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(186, 49);
-            this.addBtn.TabIndex = 22;
-            this.addBtn.Text = "Add Publisher";
-            this.addBtn.UseVisualStyleBackColor = true;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
-            // 
-            // addAuthor
-            // 
-            this.addAuthor.Location = new System.Drawing.Point(840, 24);
-            this.addAuthor.Margin = new System.Windows.Forms.Padding(4);
-            this.addAuthor.Name = "addAuthor";
-            this.addAuthor.Size = new System.Drawing.Size(186, 49);
-            this.addAuthor.TabIndex = 23;
-            this.addAuthor.Text = "Add Author";
-            this.addAuthor.UseVisualStyleBackColor = true;
-            this.addAuthor.Click += new System.EventHandler(this.addAuthor_Click);
-            // 
             // FormPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -496,6 +510,7 @@ namespace BookStore
             this.Controls.Add(this.dataGridView6);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -545,6 +560,7 @@ namespace BookStore
         private System.Windows.Forms.Button NhanVienbtn;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button addAuthor;
+        private System.Windows.Forms.Button SearchBtn;
     }
 }
 

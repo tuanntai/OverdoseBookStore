@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEditAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditAuthor.Designer.cs">
+      <DependentUpon>AddEditAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditPublisher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditPublisher.Designer.cs">
+      <DependentUpon>AddEditPublisher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Book.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +102,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeachForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeachForm.Designer.cs">
+      <DependentUpon>SeachForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +120,12 @@
     <Compile Include="UserList.Designer.cs">
       <DependentUpon>UserList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddEditAuthor.resx">
+      <DependentUpon>AddEditAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditPublisher.resx">
+      <DependentUpon>AddEditPublisher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPage.resx">
       <DependentUpon>FormPage.cs</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -125,6 +149,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SeachForm.resx">
+      <DependentUpon>SeachForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
